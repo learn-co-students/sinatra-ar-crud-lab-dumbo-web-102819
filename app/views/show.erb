@@ -1,0 +1,6 @@
+<h1> <%= Article.find(params["id"]).title %> </h1>
+<p> <%= Article.find(params["id"]).content %> </p>
+<form method="POST" action="/articles/<%=params["id"]%>">
+<input id="hidden" type="hidden" name="_method" value="DELETE">
+<input type="submit" value="delete">
+</form>
